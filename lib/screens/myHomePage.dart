@@ -16,14 +16,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool _isLoading ;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
+    _isLoading = false;
+    _isLoading = true;
     final as = Provider.of<Pizza>(context, listen: false);
     as.listPizza(context);
-
+    _isLoading = false;
     // log();
   }
 
@@ -91,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListView.builder(
                 itemCount: get.data.pizzaList.length,
                 itemBuilder: (context, index) {
-                  return Card(
+                  return _isLoading ? CircularProgressIndicator(): Card(
                     color: Colors.teal[900],
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

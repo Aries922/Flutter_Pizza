@@ -119,7 +119,7 @@ class _CreatUserState extends State<CreatUser> {
                         SizedBox(
                           height: 10,
                         ),
-                        MyTextField(
+                        MyPasswordField(
                           contr: _password,
                           name: "Password",
                           hint: "Enter Your Password",
@@ -128,7 +128,7 @@ class _CreatUserState extends State<CreatUser> {
                           },
                         ),
                         SizedBox(height: 10),
-                        MyTextField(
+                        MyPasswordField(
                           contr: _passwordAgain,
                           name: "Re-Type Password",
                           hint: "Again type password",

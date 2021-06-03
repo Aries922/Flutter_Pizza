@@ -48,6 +48,10 @@ class _LoginPageState extends State<LoginPage> {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text("$error"),
       ));
+      setState(() {
+      _isLoading = false;
+        
+      });
       return false;
     }
 
@@ -125,19 +129,17 @@ class _LoginPageState extends State<LoginPage> {
                           contr: _password,
                         ),
                         SizedBox(height: 20),
-                        _isLoading
-                            ? Container(
-                                child: CircularProgressIndicator(),
-                              )
-                            : MyButton(
+                       _isLoading ? Center(child: CircularProgressIndicator()):  MyButton(
                                 onClick: () {
                                   if (_validator(context)) _submit(context);
-
-                                  _isLoading = false;
+                                    setState(() {
+                                  _isLoading = true;
+                                      
+                                    });
                                   // showErrorDilog("hello");
                                 },
                                 name: "Login",
-                              ),
+                              ) ,
                         SizedBox(
                           height: 10,
                         ),
