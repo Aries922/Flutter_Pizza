@@ -1,0 +1,4 @@
+#Wed Jun 02 20:02:39 IST 2021
+base.0=/home/aries/FlutterProjects/pizzaapp/pizza_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
