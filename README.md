@@ -1,7 +1,9 @@
 # pizza_app
 
- <iframe width="560" height="315" src="https://youtu.be/vqJ2BtbRI_0" frameborder="0" allowfullscreen>
+ <iframe width="560" height="315" src="" frameborder="0" allowfullscreen>
    </iframe>
+   
+   [![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://youtu.be/vqJ2BtbRI_0)
 
 A new Flutter project.
 
